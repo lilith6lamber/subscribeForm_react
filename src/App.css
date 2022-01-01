@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a, button, input {
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    background: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    background: hotpink;
+    font-family: 'Work Sans', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+    height: 100vh;
+    max-width: 1160px;
+    padding: 0 12px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+p {
+    display: none;
+}
+
+p.success {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 15px;
+    color: hotpink;
+}
+
+input[type="email"] {
+    border: 2px solid hotpink;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    transition: all .4s ease-in-out;
+    margin-bottom: 15px;
+}
+
+input.error {
+    border-color: red;
+}
+
+button {
+    background: lightblue;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    transition: opacity .4s ease-in-out;
+    font-weight: 500;
+}
+
+button[disabled] {
+    cursor: default;
+    opacity: .5;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.wrapper label {
+    margin-left: 10px;
+}
+
+.wrapper label .link {
+    font-weight: 500;
+    margin-left: 5px;
+    color: hotpink;
 }
